@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PCDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="E-ATX" Type="bit" Nullable="false" />
+          <Property Name="Flex-ATX" Type="bit" Nullable="false" />
+          <Property Name="Micro-ATX" Type="bit" Nullable="false" />
+          <Property Name="Mini-DTX" Type="bit" Nullable="false" />
+          <Property Name="Mini-ITX" Type="bit" Nullable="false" />
+          <Property Name="SSI-CEB" Type="bit" Nullable="false" />
+          <Property Name="SSI-EEB" Type="bit" Nullable="false" />
+          <Property Name="Standart-ATX" Type="bit" Nullable="false" />
+          <Property Name="Thin Mini-ITX" Type="bit" Nullable="false" />
+          <Property Name="Xl-ATX" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище PCDBModelContainer">
+          <EntitySet Name="Pc" EntityType="Self.Pc" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PCDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_ATX" Type="Boolean" Nullable="false" />
+          <Property Name="Flex_ATX" Type="Boolean" Nullable="false" />
+          <Property Name="Micro_ATX" Type="Boolean" Nullable="false" />
+          <Property Name="Mini_DTX" Type="Boolean" Nullable="false" />
+          <Property Name="Mini_ITX" Type="Boolean" Nullable="false" />
+          <Property Name="SSI_CEB" Type="Boolean" Nullable="false" />
+          <Property Name="SSI_EEB" Type="Boolean" Nullable="false" />
+          <Property Name="Standart_ATX" Type="Boolean" Nullable="false" />
+          <Property Name="Thin_Mini_ITX" Type="Boolean" Nullable="false" />
+          <Property Name="Xl_ATX" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PCDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pc" EntityType="Self.Pc" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PCDBModelContainer" CdmEntityContainer="PCDBEntities">
+          <EntitySetMapping Name="Pc">
+            <EntityTypeMapping TypeName="PCDBModel.Pc">
+              <MappingFragment StoreEntitySet="Pc">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="E_ATX" ColumnName="E-ATX" />
+                <ScalarProperty Name="Flex_ATX" ColumnName="Flex-ATX" />
+                <ScalarProperty Name="Micro_ATX" ColumnName="Micro-ATX" />
+                <ScalarProperty Name="Mini_DTX" ColumnName="Mini-DTX" />
+                <ScalarProperty Name="Mini_ITX" ColumnName="Mini-ITX" />
+                <ScalarProperty Name="SSI_CEB" ColumnName="SSI-CEB" />
+                <ScalarProperty Name="SSI_EEB" ColumnName="SSI-EEB" />
+                <ScalarProperty Name="Standart_ATX" ColumnName="Standart-ATX" />
+                <ScalarProperty Name="Thin_Mini_ITX" ColumnName="Thin Mini-ITX" />
+                <ScalarProperty Name="Xl_ATX" ColumnName="Xl-ATX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
